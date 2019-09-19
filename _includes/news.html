@@ -1,0 +1,16 @@
+{% for i in page.news %}
+  <div class="news-block">
+    <p class="news-date">{{i.date}}</p>
+    <h3>{{i.name}}</h3>
+    {% for tx in i.text %}
+      <p>{{tx.p}}</p>
+    {% endfor %}
+    
+    <div class="news-img">
+      {% for photo in i.photos %}
+        <img src="{{ site.url }}/assets/photos/{{photo.img}}" class="news-img-1">
+      {% endfor %}
+    </div>  
+  </div>
+{% endfor %}
+

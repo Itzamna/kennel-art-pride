@@ -4891,29 +4891,19 @@
 #topcontrol {
   color: #fff;
   z-index: 99;
-  width: 30px;
-  height: 30px;
+  width: 74px;
+  height: 70px;
   font-size: 20px;
-  background: #222;
+  background: url(../images/arrow-1.png) no-repeat;
   position: relative;
   right: 14px !important;
   bottom: 11px !important;
   border-radius: 3px !important;
 }
 
-#topcontrol:after {
-  top: -2px;
-  left: 8.5px;
-  content: "\f106";
-  position: absolute;
-  text-align: center;
-  font-family: FontAwesome;
-}
-
 #topcontrol:hover {
-  color: #fff;
-  background: #72c02c;
-  transition: all 0.3s ease-in-out;
+  background: url(../images/arrow-2.png) no-repeat;
+
 }
 
 /*--------------------------------------------------

@@ -1,0 +1,40 @@
+{% for pet in page.pets %}
+<div class="pet-card">
+  <h1>{{pet.name}}</h1>
+  <div class="card-photo">
+    <img src="{{ site.url }}/assets/photos/{{pet.photo}}" width="300px">
+  </div>
+  <div class="card-text">
+    <p><i>Дата рождения:</i> {{pet.dob}}</p>
+    <p><i>Пол:</i> {{pet.sex}}</p>
+    <p><i>Отец:</i> {{pet.father}}</p>
+    <p><i>Мать:</i> {{pet.mother}}</p>
+    <p><i>Титулы:</i> <span style="text-transform: uppercase">{{pet.titles}}</span></p>
+    <p><i>Тесты:</i> {{pet.tests}}</p>
+    <p> {{pet.text}}</p>
+    {% if pet.link %}
+    <p><a href="{{ site.url }}/{{pet.link}}" class="button">Подробнее...</a></p>
+    {% endif %}
+  </div>
+  <div class="clear"></div>
+  {% if pet.litters %}
+  <h6> ПОМЕТЫ:</h6>
+   <p> {% for litter in pet.litters %}
+  <a href="{{ site.url }}/litters/{{litter.link}}">Помет "{{litter.name}}"</a>&nbsp;
+    {% endfor %}</p>
+  {% endif %}
+  {% if pet.pedigree %}
+    <p style="text-align:center"><a href="{{pet.pedigree}}" class="button">Родословная</a></p>
+  {% endif %} 
+  <div class="hr"></div>
+  <div class="news-img">
+    {% for photo in pet.photos %}
+      <img src="{{ site.url }}/assets/photos/{{photo.img}}" class="news-img-1">
+    {% endfor %}
+  </div>  
+  
+  
+</div>
+
+{% endfor %}
+

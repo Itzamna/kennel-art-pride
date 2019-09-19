@@ -1,0 +1,29 @@
+{% for litter in page.litters %}
+  <h1>Litter "{{litter.name}}"</h1>
+<h5 class="small-header"><b>Дата рождения:</b> {{litter.dob}}</h5>
+<table border="0" class="litermates">
+  <colgroup><col width="50%"><col width="50%"></colgroup>
+  <tbody>
+    <tr>
+      <td align="center" valign="top">
+        <a class="thickbox" href="{{ litter.father-link }}"> <img src="{{ site.url }}/assets/photos/{{ litter.father-photo }}" width="300px"></a>
+      </td>
+      <td align="center" valign="top">
+        <a class="thickbox" href="{{ litter.mother-link }}"><img src="{{ site.url }}/assets/photos/{{ litter.mother-photo }}" width="300px"></a></td>
+    </tr>
+
+    <tr>
+      <td align="left">
+        <h7><a href="{{ litter.father-link }}" style="text-center">{{ litter.father-name }}</a></h7>
+        <p class="small-info">{{ litter.father-titles }}</p>
+      </td>
+      <td align="right">
+        <h7><a href="{{ litter.mother-link }}" style="text-center">{{ litter.mother-name }}</a></h7>
+        <p class="small-info">{{ litter.father-titles }}</p>
+
+      </td>    
+    </tr>
+  </tbody>
+</table>
+{% endfor %}
+
