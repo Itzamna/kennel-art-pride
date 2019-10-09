@@ -397,7 +397,7 @@ ul.list {
   font-style:italic;
   text-decoration: none;
   line-height:1.2;
-
+  text-transform: capitalize;
 
 }
 #top-menu li a:hover{
