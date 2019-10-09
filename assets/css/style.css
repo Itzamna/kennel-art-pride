@@ -41,6 +41,19 @@ p {
   font-family:  Georigia, serif;
   font-size: 16pt; 
   text-align: justify;
+  text-indent: 20pt;
+}
+.main-text li {
+  color: #ddce94;
+  font-family:  Georigia, serif;
+  font-size: 16pt; 
+  text-align: justify;
+  margin-left:60px;
+}
+.main-text ul {
+  color: #ddce94;
+  font-family:  Georigia, serif;
+  font-size: 16pt; 
 }
 a {
   color: #ddce94;
@@ -48,6 +61,15 @@ a {
   font-size: 16pt; 
   font-style: italic;
 }
+a:hover {
+  color: #ddce94;
+  font-family:  Georigia, serif;
+  font-size: 16pt; 
+  font-style: italic;
+  text-decoration: underline;
+}
+
+
 h1, h1 a, h1 a:hover{
   color: #ddce94;
   font: 48px 'Good Vibes Pro', Arial, Tahoma, Verdana, sans-serif;
@@ -89,6 +111,7 @@ h4, h4 a, h4 a:hover{
   margin-bottom:10px;
   text-align: center;
 }
+
 h5, h5 a, h5 a:hover{
   color: #ddce94;
   font: 24px Georgia, Arial, Tahoma, Verdana, sans-serif;
@@ -103,7 +126,6 @@ h5.small-header, h5.small-header a, h5.small-header a:hover{
   text-shadow: 0px 0px 4px #000;
   margin-bottom:10px;
   text-align: center;
-
 }
 h6, h6 a, h6 a:hover{
   color: #ddce94;
@@ -119,6 +141,30 @@ h7, h7 a, h7 a:hover{
   text-shadow: 0px 0px 4px #000;
   margin-bottom:10px;
   text-align: center;
+  display: block;
+}
+.hline{
+  display: block;
+  height:80px;
+  width:582px;
+  background: url('../images/h-line.png');
+  background-position: top center;
+  background-repeat: no-repeat;
+  border: none !important;
+  text-decoration:none;
+  padding-left: 40px;
+}
+.hline-1{
+  display: block;
+  height: 171px;
+  width: 547px;
+  background: url(../images/h-line-1.png);
+  background-position: top left;
+  background-repeat: no-repeat;
+  border: none !important;
+  text-decoration: none;
+  margin-left: 220px;
+  margin-bottom: -150px;
 }
 .small-info {
   font-size: 12pt;
@@ -128,7 +174,7 @@ h7, h7 a, h7 a:hover{
   border: 3px dotted #c905c6;
   border-image-source: url(../images/border.png);
   border-image-slice: 3;
-  margin: 10px;
+  margin: 10px 15px;
 }
 
 .news-block {
@@ -154,11 +200,46 @@ h7, h7 a, h7 a:hover{
   text-align: center;
   height: 200px;
 }
-.wrapper {
+.news-img-2{
+  text-align: center;
+  height: 350px;
+}
+.gallery-img{
+  text-align: center;
+  height: 180px;
+}
+.article-block {
+  width: 913px; /* Ширина блока с учётом padding */
+  min-height: 300px; /* Минимальная высота */
+  background: 
+    url(../images/news-top.jpg) 0 0 no-repeat,
+    url(../images/news-bottom.jpg) 0 100% no-repeat, 
+    url(../images/news-bg-2.jpg) 0 0 repeat-y;
+  padding: 10px 40px; /* Поля вокруг текста с учётом границы */
+  margin: 30px 20px;
+}
+.article-date{
+  color: #a99a73;
+  font-family:  Georigia, serif;
+  font-size: 12pt; 
+  text-align: right;
+}
+.article-img{
+  float: left;
+  margin: 10px 20px;
+  width: 200px;
+}
 
+.article-text{
+ // display: inline-block;
+}
+.pet-photo{
+  text-align: center;
+}
+.wrapper {
   margin: 0 auto;
   overflow: hidden;
-  width: 1087px;
+  width: 1287px;
   color: #fff;
   min-height: 400px;
   color: #fff;
@@ -167,6 +248,7 @@ h7, h7 a, h7 a:hover{
 }
 .head {
   background-image: url(../images/header-1.png);
+  //background-image: url(../images/header-cat-main.png);
   background-position: center center;
   background-repeat: no-repeat;
   margin: 0 auto;
@@ -189,12 +271,12 @@ h7, h7 a, h7 a:hover{
 }
 .content{
   margin: 0 auto; 
-  width: 1087px; /* Ширина блока с учётом padding */
+  width: 1080px; /* Ширина блока с учётом padding */
   height: auto;
   background: 
-    url(../images/content-top-1.png) 0 0 no-repeat,
-    url(../images/content-bottom-1.png) 0 100% no-repeat, 
-    url(../images/content-bg.png) 0 0 repeat-y;
+    url(../images/content-top.png) 0 0 no-repeat,
+    url(../images/content-bottom.png) 0 100% no-repeat, 
+    url(../images/content-bg-1.png) 0 0 repeat-y;
   padding: 40px; /* Поля вокруг текста с учётом границы */
   color: #fff;
   min-height: 700px;
@@ -233,19 +315,16 @@ h7, h7 a, h7 a:hover{
 .inner-footer, .inner-footer a, .inner-footer a:hover{
   margin: 0 auto;
   overflow: hidden;
-  width: 600px;
   color: #e5cf91;
   font: 20px  'Academy', Georgia, Tahoma, Verdana, sans-serif;
   padding-top:100px;
   text-align: center;
   text-decoration:none;
 }
+.inner-footer {
+}
 .right-footer {
-  position: absolute;
-  bottom: 40px;
-  right: 400px;
-  text-align: right;
-  width: 250px;
+  margin-top:20px;
   color: #806e49;
   font-size: 12pt;
 }
@@ -263,6 +342,8 @@ ul.list {
   margin-top: 10px;
   margin-bottom: 30px;
   width:100%;
+  line-height:1.2;
+
 }
 #top-menu li{
   float:left;
@@ -271,6 +352,8 @@ ul.list {
   padding-left:13px;
   position:relative;
   padding-top: 8px;
+  line-height:1.2;
+
 }
 #top-menu li ul{
   list-style:none;
@@ -281,6 +364,8 @@ ul.list {
   position:absolute;
   left:0;
   top:41px;
+  line-height:1.2;
+
 }
 #top-menu li ul li{
   float:none;
@@ -295,12 +380,16 @@ ul.list {
   border-left: dotted 1px #D9B69B;
   padding: 5px;
   z-index:500;
+  line-height:1.2;
+
 }
 #top-menu li ul li a{
   color: #523920;
   font: 24px 'Good Vibes Pro', Arial, Tahoma, Verdana, sans-serif;
   font-style:italic;
   text-decoration: none;
+  line-height:1.2;
+
 }
 #top-menu li a{
   color: #523920;
@@ -309,18 +398,24 @@ ul.list {
   text-decoration: none;
   line-height:1.2;
 
+
 }
 #top-menu li a:hover{
   line-height:1.2;
   text-shadow: 0px 0px 8px #fffcf2, 0px 0px 8px #fffcf2, 0px 0px 8px #fffcf2;
+  
 }
 #top-menu li:hover ul, #top-menu li.jshover ul{
-  display:block;  
+  display:block;
+  line-height:1.2;
+
 }
 #top-menu li:hover, #top-menu li.jshover{
   color: #E9AA55;
   font: 28px 'Good Vibes Pro', Arial, Tahoma, Verdana, sans-serif;
   font-style:italic;
+  line-height:1.2;
+
 }
 .clear{
   clear: both;
@@ -331,7 +426,7 @@ ul.list {
   text-transform: uppercase;
   position: absolute;
   top: 149px;
-  left:810px;
+  left:530px;
   font-weight: bold;
 }
 .card-photo {
@@ -345,7 +440,7 @@ ul.list {
   color: #a3946f;
 }
 .card-text p{
-  color: #a3946f;
+  color: #ddce94;
   font-size: 14pt;
 }
 .pet-card, .pet-card a {
@@ -368,12 +463,11 @@ ul.list {
   background-repeat: no-repeat;
   border: none !important;
   text-decoration:none;
-
 }
 a.button{
   text-decoration:none !important;
   font: 20px 'Good Vibes Pro', Arial, Tahoma, Verdana, sans-serif;
-  color: #cdbe8a;
+  color: #ddce94;
   line-height: 1.9;
 }
 a.button:hover{
@@ -381,12 +475,62 @@ a.button:hover{
   font: 20px 'Good Vibes Pro', Arial, Tahoma, Verdana, sans-serif;
   color: #ddce94;
   line-height: 1.9;
+  text-shadow: 0px 0px 2px #fffcf2;
+
+}
+
+input.button{
+  text-decoration:none !important;
+  font: 20px 'Good Vibes Pro', Arial, Tahoma, Verdana, sans-serif;
+  color: #ddce94;
+  line-height: 1.9;
+  padding: 0px 0px !important;
+  margin: 0px 0px !important;
+  height:40px;
+}
+input.button:hover{
+  text-decoration:none !important;
+  font: 20px 'Good Vibes Pro', Arial, Tahoma, Verdana, sans-serif;
+  color: #ddce94;
+  line-height: 1.9;
+  text-shadow: 0px 0px 2px #fffcf2;
+  padding: 0px 0px !important;
+  margin: 0px 0px !important;
+}
+.big-button {
+  display: inline-block;
+  height:38px;
+  width:275px;
+  text-align:center;
+  background: url('../images/big-button.png');
+  background-position: top center;
+  background-repeat: no-repeat;
+  border: none !important;
+  text-decoration:none;
+
+}
+a.big-button{
+  text-decoration:none !important;
+  font: 26px 'Good Vibes Pro', Arial, Tahoma, Verdana, sans-serif;
+  color: #cdbe8a;
+  line-height: 1.8;
+}
+a.big-button:hover{
+  display: inline-block;
+  height:38px;
+  width:275px;
+  text-align:center;
+  background: url('../images/big-button-hover.png');
+  text-decoration:none !important;
+  font: 26px 'Good Vibes Pro', Arial, Tahoma, Verdana, sans-serif;
+  color: #ddce94;
+  line-height: 1.8;
   
 }
 .top-contacts{
   position: absolute;
   top:70px;
-  right: 420px;
+  right: 100px;
   text-align: right;
   color: #e5d091;
   font-size: 18pt;
@@ -410,5 +554,242 @@ a.button:hover{
 table.litermates {
   width: 100%;
   margin: 0 auto;
-  background: url(../images/litter-bg.png) center center no-repeat;
+  background: url(../images/litter-bg.png) top center no-repeat;
+}
+table.litermates td{
+  padding-top:30px;
+}
+
+table.t-contacts {
+  width: 100%;
+  margin: 0 auto;
+  height: 340px;
+  margin-top:20px;
+
+}
+.contacts {
+  margin: 0 auto;
+  background-image: url(../images/bg-contacts.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 853px;
+  height: 365px;
+
+}
+.h-contacts {
+  color: #ddce94;
+  font: 30px 'Good Vibes Pro', Arial, Tahoma, Verdana, sans-serif;
+  text-shadow: -2px 5px 0px #000;
+  margin-bottom:5px;
+  text-align: left;
+  margin-top:12px;
+  margin-left: 30px;
+}
+.p-contacts{
+  color: #ddce94;
+  font: 20px Georgia, Arial, Tahoma, Verdana, sans-serif;
+  text-shadow: 0px 0px 4px #000;
+  margin-left:80px;
+  text-align: left;
+  font-style:italic;
+}
+.p-contacts a, .p-contacts a:hover {
+  color: #ddce94;
+  font: 20px Georgia, Arial, Tahoma, Verdana, sans-serif;
+  text-shadow: 0px 0px 4px #000;
+  text-decoration: none;
+}
+
+
+
+table.t-contacts-form {
+  margin: 0 auto;
+  width: 480px;
+  height: 200px;
+  display:block;
+  padding-top: 30px;
+
+}
+.contacts-form {
+  margin: 0 auto;
+  background-image: url(../images/contacts-form.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 747px;
+  height: 370px;
+  display:block;
+}
+
+
+.p-contacts-form {
+  color: #272626;
+  font: 16px Georgia, Arial, Tahoma, Verdana, sans-serif;
+  text-decoration: none;
+  text-align: left;
+  line-height: 1.8;
+  margin-left: 20px;
+}
+
+
+/* Поле сообщения */
+textarea{
+    background: transparent;
+    width: 100%;
+    height: 110px;
+    border: none;
+    display:block;
+    font: 16px Georgia, Arial, Tahoma, Verdana, sans-serif;
+    color:#272626;
+    overflow:hidden;
+    padding-left: 10px;
+    padding-top:8px;
+}
+/* Поля ввода */
+input {
+    width: 100%;
+    background: transparent;
+    height: 40px;
+    border: none;
+    display:block;
+    font: 16px Georgia, Arial, Tahoma, Verdana, sans-serif;
+    color:#272626;
+    padding-left: 10px;
+}
+input[type=submit] {
+    cursor:pointer;
+    border: #fff;
+
+}
+::-moz-selection {
+	background:   #aaa;
+	color:       #aaa;
+	text-shadow: none;
+}
+
+::selection {
+	background:   #aaa;
+	color:       #aaa;
+	text-shadow: none;
+}
+
+::-webkit-input-placeholder {
+    color:#272626;
+    border: #fff;
+
+}
+:-moz-placeholder{ 
+    color:#272626;
+    border: #fff;
+
+}
+::-moz-placeholder {
+    color:#272626;
+    border: #fff;
+
+}
+:-ms-input-placeholder {  
+    color:#272626;
+    border: #fff;
+
+}
+input:focus, textarea:focus { 
+    background: transparent;
+    overflow: hidden; 
+    border: #fff;
+  outline: 0;
+  outline-offset: 0;
+  
+}
+:focus
+{
+outline: 0;
+outline-offset: 0;
+}
+.left-pos{
+  float:left;
+}
+
+.right-pos{
+  float:right;
+}
+.center-pos{
+  margin: 0 auto;
+  display:block;
+  text-align:center;
+}
+
+.page {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Фиксируем позицию body, которую меняет панель гугла*/
+
+.page_fix {
+    top: 0 !important;
+    position: static !important;
+}
+
+/* Прячем панель гугла */
+
+.skiptranslate {
+    display: none !important;
+}
+
+/* language */
+
+.language {
+    position: fixed;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+}
+
+.language__img {
+    margin: 2px;
+    cursor: pointer;
+    opacity: .5;
+    border: none !important;
+}
+
+.language__img:hover,
+.language__img_active {
+    opacity: 1;
+}
+table.table-pedigree{
+  border-spacing: 0 10px;
+  margin: 10px;
+}
+table.table-pedigree td {
+  vertical-align: middle;
+  padding: 10px;
+  text-align: center;
+  border: 2px solid #f0e0a2;
+
+}
+.pedigree-name{
+  text-transform: uppercase;
+  color:  #f0e0a2;
+  text-shadow: -4px 4px 2px #202020;
+  font-size: 14pt;
+
+}
+.pedigree-titles{
+  text-transform: uppercase;
+  color:  #fff;
+  font-size: 12pt;
+}
+table.table-pedigree td:nth-child(3){
+  background-color: #202020;
+}
+table.table-pedigree td:nth-child(1){
+  background-color: #312f2e;
+}
+table.table-pedigree td:nth-child(2){
+  background-color: #202020;
+}
+table.table-pedigree td.blck-pedigree-table{
+  background-color: #202020;
 }

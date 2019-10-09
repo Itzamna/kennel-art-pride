@@ -1,0 +1,79 @@
+{% for pet in page.pets %}
+<div class="pet-card">
+  <h1>{{pet.name}}</h1>
+  <div class="card-photo">
+    <img src="{{ site.url }}/assets/photos/{{pet.photo}}" width="300px">
+  </div>
+  <div class="card-text">
+    <p><i><b>Дата рождения:</b></i> {{pet.dob}}</p>
+    <p><i><b>Пол:</b></i> {{pet.sex}}</p>
+    <p><i><b>Отец:</b></i> {{pet.father}}</p>
+    <p><i><b>Мать:</b></i> {{pet.mother}}</p>
+    <p><i><b>Титулы:</b></i> <span style="text-transform: uppercase">{{pet.titles}}</span></p>
+    <p><i><b>Тесты:</b></i> {{pet.tests}}</p>
+    <p> {{pet.text}}</p>
+    {% if pet.link %}
+      <br>
+    <p style="text-align:center"><a href="{{ site.url }}/{{pet.link}}" class="button">Подробнее...</a></p>
+    {% endif %}
+  </div>
+  <div class="clear"></div>
+  {% if pet.litters %}
+  <h3> Пометы:</h3>
+   <p> {% for litter in pet.litters %}
+  <a href="{{ site.url }}/litters/{{litter.link}}">Помет "{{litter.name}}"</a>&nbsp;
+    {% endfor %}</p>
+  {% endif %}
+  
+  <h3> Родословная:</h3>
+<table border="1" cellpadding="1" cellspacing="1" width="100%" class="table-pedigree">
+  <col width=33%></col>
+  <col width=33%></col>
+  <col width=33%></col>
+	<tbody>
+		<tr>
+			<td colspan="1" rowspan="4" class="blck-pedigree-table"><div class="pedigree-name">{{pet.f-name}}</div>{% if pet.f-titles %}<div class="pedigree-titles">{{pet.f-titles}}</div>{% endif %}</td>
+			<td colspan="1" rowspan="2"><div class="pedigree-name">{{pet.ff-name}}</div>{% if pet.ff-titles %}<div class="pedigree-titles">{{pet.ff-titles}}</div>{% endif %}</td>
+			<td><div class="pedigree-name">{{pet.fff-name}}</div>{% if pet.fff-titles %}<div class="pedigree-titles">{{pet.fff-titles}}</div>{% endif %}</td>
+		</tr>
+		<tr>
+			<td><div class="pedigree-name">{{pet.ffm-name}}</div>{% if pet.ffm-titles %}<div class="pedigree-titles">{{pet.ffm-titles}}</div>{% endif %}</td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="2"><div class="pedigree-name">{{pet.fm-name}}</div>{% if pet.fm-titles %}<div class="pedigree-titles">{{pet.fm-titles}}</div>{% endif %}</td>
+			<td><div class="pedigree-name">{{pet.fmf-name}}</div>{% if pet.fmf-titles %}<div class="pedigree-titles">{{pet.fmf-titles}}</div>{% endif %}</td>
+		</tr>
+		<tr>
+			<td><div class="pedigree-name">{{pet.fmm-name}}</div>{% if pet.fmm-titles %}<div class="pedigree-titles">{{pet.fmm-titles}}</div>{% endif %}</td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="4"><div class="pedigree-name">{{pet.m-name}}</div>{% if pet.m-titles %}<div class="pedigree-titles">{{pet.m-titles}}</div>{% endif %}</td>
+			<td colspan="1" rowspan="2"><div class="pedigree-name">{{pet.mf-name}}</div>{% if pet.mf-titles %}<div class="pedigree-titles">{{pet.mf-titles}}</div>{% endif %}</td>
+			<td><div class="pedigree-name">{{pet.mff-name}}</div>{% if pet.mff-titles %}<div class="pedigree-titles">{{pet.mff-titles}}</div>{% endif %}</td>
+		</tr>
+		<tr>
+			<td><div class="pedigree-name">{{pet.mfm-name}}</div>{% if pet.mfm-titles %}<div class="pedigree-titles">{{pet.mfm-titles}}</div>{% endif %}</td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="2"><div class="pedigree-name">{{pet.mm-name}}</div>{% if pet.mm-titles %}<div class="pedigree-titles">{{pet.mm-titles}}</div>{% endif %}</td>
+			<td><div class="pedigree-name">{{pet.mmf-name}}</div>{% if pet.mmf-titles %}<div class="pedigree-titles">{{pet.mmf-titles}}</div>{% endif %}</td>
+		</tr>
+		<tr>
+			<td><div class="pedigree-name">{{pet.mmm-name}}</div>{% if pet.mmm-titles %}<div class="pedigree-titles">{{pet.mmm-titles}}</div>{% endif %}</td>
+		</tr>
+	</tbody>
+</table>
+
+  <h3>Фотоальбом:</h3>
+
+  <div class="news-img">
+    {% for photo in pet.photos %}
+      <a href="{{ site.url }}/assets/photos/{{photo.img}}" class="thickbox"><img src="{{ site.url }}/assets/photos/{{photo.img}}" class="news-img-1"></a>
+    {% endfor %}
+  </div>  
+  
+  
+</div>
+
+{% endfor %}
+

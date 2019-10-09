@@ -8,7 +8,9 @@
     
     <div class="news-img">
       {% for photo in i.photos %}
-        <img src="{{ site.url }}/assets/photos/{{photo.img}}" class="news-img-1">
+      <a href="{{ site.url }}/assets/photos/{{photo.img}}" class="thickbox">
+        <img src="{{ site.url }}/assets/photos/{{photo.img}}" class="news-img-2">
+      </a>  
       {% endfor %}
     </div>  
   </div>

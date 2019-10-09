@@ -5,49 +5,60 @@
 <html>
   <head>
     {% include head.html %}
+	<!-- Google translate -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script src="{{ site.url }}/assets/js/google-translate.js"></script>
+    <script src="//translate.google.com/translate_a/element.js?cb=TranslateInit"></script>
   </head>
-  <body class="all">
-    <div class="head">
-      <div class="top-kennel">Питомник кеесхондов</div>
-      <div class="top-contacts">
-        <div class="top-phone">Тел.: <a href="tel:+79165905050">+7-916-590-50-50</a><br>
-        e-mail: <a href="mailto:artprides@yandex.ru">artprides@yandex.ru</a>
-        </div>
-        <div class="top-breeder-note"><span class="top-breeder">Анастасия Атрашкевич</span><br> заводчик</div>
-      </div>
-      <div class="menu">
-        <ul id="top-menu">
-          <li><a href="/">Главная</a></li>
-          <li><a href="/dogs.html">Наши собаки</a></li>
-          <li><a href="#">Щенки</a></li>
-          <li><a href="#">Пометы</a></li>
-          <li><a href="/news.html">Новости</a></li>
-          <li><a href="#">Статьи</a></li>
-          <li><a href="#">Контакты</a></li>
-        </ul>
-      </div>
-    </div>
+  <body class="all page_fix ">
     <div class="wrapper">
+      <div class="head">
+        <div class="top-kennel">Питомник кеесхондов</div>
+        <div class="top-contacts">
+          <div class="top-phone">Тел.: <a href="tel:+79165905050">+7-916-590-50-50</a><br>
+          e-mail: <a href="mailto:artprides@yandex.ru">artprides@yandex.ru</a>
+          </div>
+          <div class="top-breeder-note"><span class="top-breeder">Анастасия Атрашкевич</span><br> заводчик</div>
+        </div>
+        <div class="menu">
+          <ul id="top-menu">
+            <li><a href="{{ site.url }}">Главная</a></li>
+            <li><a href="{{ site.url }}/dogs.html">Наши собаки</a></li>
+            <li><a href="{{ site.url }}/puppies.html">Щенки</a></li>
+            <li><a href="{{ site.url }}/litters.html">Пометы</a></li>
+            <li><a href="{{ site.url }}/news.html">Новости</a></li>
+            <li><a href="{{ site.url }}/articles.html">Статьи</a></li>
+            <li><a href="{{ site.url }}/contacts.html">Контакты</a></li>
+          </ul>
+        </div>
+      </div>
       <div class="content">
         <div class="main-text">
+          <div class="language">
+            <img src="{{ site.url }}/assets/images/flags/ru.png" alt="ru" data-google-lang="ru" class="language__img">
+            <img src="{{ site.url }}/assets/images/flags/gb.png" alt="en" data-google-lang="en" class="language__img">
+            <img src="{{ site.url }}/assets/images/flags/it.png" alt="it" data-google-lang="it" class="language__img">
+            <img src="{{ site.url }}/assets/images/flags/de.png" alt="de" data-google-lang="de" class="language__img">
+          </div>
           <h1>{{ page.title }}</h1>
           {{ content }}
         </div>
       </div>
-      <div class="bottom-content"></div>
     </div>
     <div class="footer">
       <div class="inner-footer">
-        Тел.: <a href="tel:+79165905050">+7-916-590-50-50</a>
+        Тел.: <a href="tel:+79165631969">+7-916-563-19-69</a>
         <br><br>
         <i class="fab fa-vk"></i>
         <i class="fab fa-facebook"></i>
         <i class="fab fa-instagram"></i>
-      </div>
       <div class="right-footer">
-        &copy; 2019. Все права защищены <br> artprides.ru<br>
+        &copy; 2019. Все права защищены. artprides.ru
         Любое копирование только с разрешения правообладателя.
       </div>
+      </div>
+
     </div>
   
   
@@ -58,6 +69,8 @@
 	<script type="text/javascript" src="{{ site.url }}/assets/plugins/jquery/jquery-migrate.min.js"></script>
 	<script type="text/javascript" src="{{ site.url }}/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 	<!-- JS Implementing Plugins -->
+  <script src="{{ site.url }}/assets/plugins/thickbox/js/thickbox.js" type="text/javascript"></script>                                                        
+  <link rel="stylesheet" href="{{ site.url }}/assets/plugins/thickbox/css/thickbox.css" type="text/css">
 	<script type="text/javascript" src="{{ site.url }}/assets/plugins/back-to-top.js"></script>
 	<script type="text/javascript" src="{{ site.url }}/assets/plugins/jquery-appear.js"></script>
 	<script type="text/javascript" src="{{ site.url }}/assets/plugins/jquery.parallax.js"></script>
@@ -74,6 +87,7 @@
 	<script type="text/javascript" src="{{ site.url }}/assets/js/plugins/owl-carousel.js"></script>
 	<script type="text/javascript" src="{{ site.url }}/assets/plugins/fancybox/source/jquery.fancybox.pack.js"></script>
 	<script type="text/javascript" src="{{ site.url }}/assets/js/plugins/fancy-box.js"></script>
+
  	<script type="text/javascript">
 		jQuery(document).ready(function() {
 			App.init();

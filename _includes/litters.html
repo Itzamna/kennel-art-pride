@@ -1,6 +1,6 @@
 {% for litter in page.litters %}
   <h1>Litter "{{litter.name}}"</h1>
-<h5 class="small-header"><b>Дата рождения:</b> {{litter.dob}}</h5>
+<h5 class="small-header"><i><b>Дата рождения:</b></i> {{litter.dob}}</h5>
 <table border="0" class="litermates">
   <colgroup><col width="50%"><col width="50%"></colgroup>
   <tbody>
@@ -13,17 +13,42 @@
     </tr>
 
     <tr>
-      <td align="left">
+      <td align="left"  valign="top">
         <h7><a href="{{ litter.father-link }}" style="text-center">{{ litter.father-name }}</a></h7>
         <p class="small-info">{{ litter.father-titles }}</p>
       </td>
-      <td align="right">
+      <td align="right"   valign="top">
         <h7><a href="{{ litter.mother-link }}" style="text-center">{{ litter.mother-name }}</a></h7>
-        <p class="small-info">{{ litter.father-titles }}</p>
-
+        <p class="small-info">{{ litter.mother-titles }}</p>
       </td>    
     </tr>
   </tbody>
 </table>
+  {% if litter.link %}
+    <p style="text-align:center"><a href="{{ site.url }}/litters/{{litter.link}}" class="big-button">Подробнее о помете</a></p>
+  {% endif %} 
+
+{% if litter.puppies %}
+  {% assign sexes = litter.puppies | group_by:"gender"%}
+  {% for sex in sexes %}          
+    {% if sex.name=="male" %}<h3 class="hline">Кобели</h3>{% endif %}  
+    {% if sex.name=="female" %}<h3 class="hline">Суки</h3>{% endif %}  
+    {% assign pets = sex.items %}
+      {% for pet in pets %}
+        <h1>{{pet.name}}</h1>
+        <h5>{{pet.status}}</h5>
+        <div class="pet-photo">
+          {% for photo in pet.photos %}
+          <a href="{{ site.url }}/assets/photos/{{photo.img}}" class="thickbox"><img src="{{ site.url }}/assets/photos/{{photo.img}}" class="gallery-img"></a>
+          {% endfor %}
+        </div>
+        <div class="hr"></div>
+      {% endfor %}  
+  {% endfor %} 
+
+{% else %}
+<div class="hr"></div>
+{% endif %}
+
 {% endfor %}
 

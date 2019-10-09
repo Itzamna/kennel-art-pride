@@ -1,0 +1,15 @@
+{% for i in page.articles %}
+  <div class="article-block">
+    <h3>{{i.name}}</h3>
+    {% if i.photo %}
+      <img src="{{ site.url }}/assets/photos/{{i.photo}}" class="article-img">
+    {% endif %}
+    <div class="article-text">
+      {{i.text}}
+    </div>
+    <div class="clear"></div>    
+    <p style="text-align:right"><a href="{{ site.url }}/articles/{{i.link}}" class="button">Подробнее...</a></p>
+
+  </div>
+{% endfor %}
+

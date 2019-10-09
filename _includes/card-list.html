@@ -5,15 +5,16 @@
     <img src="{{ site.url }}/assets/photos/{{pet.photo}}" width="300px">
   </div>
   <div class="card-text">
-    <p><i>Дата рождения:</i> {{pet.dob}}</p>
-    <p><i>Пол:</i> {{pet.sex}}</p>
-    <p><i>Отец:</i> {{pet.father}}</p>
-    <p><i>Мать:</i> {{pet.mother}}</p>
-    <p><i>Титулы:</i> <span style="text-transform: uppercase">{{pet.titles}}</span></p>
-    <p><i>Тесты:</i> {{pet.tests}}</p>
+    <p><i><b>Дата рождения:</b></i> {{pet.dob}}</p>
+    <p><i><b>Пол:</b></i> {{pet.sex}}</p>
+    <p><i><b>Отец:</b></i> {{pet.father}}</p>
+    <p><i><b>Мать:</b></i> {{pet.mother}}</p>
+    <p><i><b>Титулы:</b></i> <span style="text-transform: uppercase">{{pet.titles}}</span></p>
+    <p><i><b>Тесты:</b></i> {{pet.tests}}</p>
     <p> {{pet.text}}</p>
     {% if pet.link %}
-    <p><a href="{{ site.url }}/{{pet.link}}" class="button">Подробнее...</a></p>
+      <br>
+    <p style="text-align:center"><a href="{{ site.url }}/{{pet.link}}" class="button">Подробнее...</a></p>
     {% endif %}
   </div>
   <div class="clear"></div>
@@ -29,7 +30,7 @@
   <div class="hr"></div>
   <div class="news-img">
     {% for photo in pet.photos %}
-      <img src="{{ site.url }}/assets/photos/{{photo.img}}" class="news-img-1">
+      <a href="{{ site.url }}/assets/photos/{{photo.img}}" class="thickbox"><img src="{{ site.url }}/assets/photos/{{photo.img}}" class="news-img-1"></a>
     {% endfor %}
   </div>  
   
