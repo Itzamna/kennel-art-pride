@@ -5,9 +5,8 @@
 <html>
   <head>
     {% include head.html %}
-
   </head>
-  <body >
+  <body class="all page_fix ">
     <div class="wrapper">
       <div class="head">
         <div class="top-kennel">Питомник кеесхондов</div>
@@ -31,7 +30,12 @@
       </div>
       <div class="content">
         <div class="main-text">
-
+          <div class="language">
+            <img src="{{ site.url }}/assets/images/flags/ru.png" alt="ru" data-google-lang="ru" class="language__img">
+            <img src="{{ site.url }}/assets/images/flags/gb.png" alt="en" data-google-lang="en" class="language__img">
+            <img src="{{ site.url }}/assets/images/flags/it.png" alt="it" data-google-lang="it" class="language__img">
+            <img src="{{ site.url }}/assets/images/flags/de.png" alt="de" data-google-lang="de" class="language__img">
+          </div>
           <h1>{{ page.title }}</h1>
           {{ content }}
         </div>
@@ -51,9 +55,6 @@
       </div>
 
     </div>
-  
-  
-  
 
 	<!-- JS Global Compulsory -->
 	<script type="text/javascript" src="{{ site.url }}/assets/plugins/jquery/jquery.min.js"></script>
