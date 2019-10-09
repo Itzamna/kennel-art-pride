@@ -1,12 +1,6 @@
-/*!***************************************************
- * google-translate.js v1.0.2
- * https://Get-Web.Site/
- * author: L2Banners
- *****************************************************/
-
 const googleTranslateConfig = {
     lang: "ru",
-    domain: "kennel.artprides.ru" 
+    domain: "kennel.artprides.ru"
 };
 
 function TranslateInit() {
