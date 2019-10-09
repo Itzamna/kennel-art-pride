@@ -6,7 +6,7 @@
 
 const googleTranslateConfig = {
     lang: "ru",
-    domain: "kennel.art-prides.ru" 
+    domain: "kennel.artprides.ru" 
 };
 
 function TranslateInit() {
