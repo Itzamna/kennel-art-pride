@@ -10,7 +10,7 @@ $.browser.msie6 =
      && /MSIE 6\.0/i.test(window.navigator.userAgent)
     && !/MSIE 7\.0/i.test(window.navigator.userAgent);
 
-var tb_pathToImage = "../assets/jquery/thickbox/images/loadingAnimation.gif";
+var tb_pathToImage = "../assets/plugins/thickbox/images/loadingAnimation.gif";
 /*!!!!!!!!!!!!!!!!! edit below this line at your own risk !!!!!!!!!!!!!!!!!!!!!!!*/
 //on page load call tb_init
 $(document).ready(function(){   
