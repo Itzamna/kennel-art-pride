@@ -1,17 +1,26 @@
+/*!***************************************************
+ * google-translate.js v1.0.2
+ * https://Get-Web.Site/
+ * author: L2Banners
+ *****************************************************/
+
 const googleTranslateConfig = {
     lang: "ru",
+    domain: "kennel.art-prides.ru" 
 };
 
 function TranslateInit() {
-
     let code = TranslateGetCode();
     // Находим флаг с выбранным языком для перевода и добавляем к нему активный класс
-    $('[data-google-lang="' + code + '"]').addClass('language__img_active');
+    if (document.querySelector('[data-google-lang="' + code + '"]') !== null) {
+        document.querySelector('[data-google-lang="' + code + '"]').classList.add('language__img_active');
+    }
+
 
     if (code == googleTranslateConfig.lang) {
         // Если язык по умолчанию, совпадает с языком на который переводим
         // То очищаем куки
-        TranslateClearCookie();
+        TranslateCookieHandler(null, googleTranslateConfig.domain);
     }
 
     // Инициализируем виджет с языком по умолчанию
@@ -20,8 +29,8 @@ function TranslateInit() {
     });
 
     // Вешаем событие  клик на флаги
-    $('[data-google-lang]').click(function () {
-        TranslateSetCookie($(this).attr("data-google-lang"))
+    TranslateEventHandler('click', '[data-google-lang]', function (e) {
+        TranslateCookieHandler("/" + googleTranslateConfig.lang + "/" + e.getAttribute("data-google-lang"), googleTranslateConfig.domain);
         // Перезагружаем страницу
         window.location.reload();
     });
@@ -29,21 +38,31 @@ function TranslateInit() {
 
 function TranslateGetCode() {
     // Если куки нет, то передаем дефолтный язык
-    let lang = ($.cookie('googtrans') != undefined && $.cookie('googtrans') != "null") ? $.cookie('googtrans') : googleTranslateConfig.lang;
-    return lang.substr(-2);
+    let lang = (Cookies.get('googtrans') != undefined && Cookies.get('googtrans') != "null") ? Cookies.get('googtrans') : googleTranslateConfig.lang;
+    return lang.match(/(?!^\/)[^\/]*$/gm)[0];
 }
 
-function TranslateClearCookie() {
-    $.cookie('googtrans', null);
-    $.cookie("googtrans", null, {
+function TranslateCookieHandler(val, domain) {
+    // Записываем куки /язык_который_переводим/язык_на_который_переводим
+    Cookies.set('googtrans', val);
+    Cookies.set("googtrans", val, {
         domain: "." + document.domain,
+    });
+
+    if (domain == "undefined") return;
+    // записываем куки для домена, если он назначен в конфиге
+    Cookies.set("googtrans", val, {
+        domain: domain,
+    });
+
+    Cookies.set("googtrans", val, {
+        domain: "." + domain,
     });
 }
 
-function TranslateSetCookie(code) {
-    // Записываем куки /язык_который_переводим/язык_на_который_переводим
-    $.cookie('googtrans', "/auto/" + code);
-    $.cookie("googtrans", "/auto/" + code, {
-        domain: "." + document.domain,
+function TranslateEventHandler(event, selector, handler) {
+    document.addEventListener(event, function (e) {
+        let el = e.target.closest(selector);
+        if (el) handler(el);
     });
 }
