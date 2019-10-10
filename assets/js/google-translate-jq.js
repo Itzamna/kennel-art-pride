@@ -5,8 +5,7 @@
  *****************************************************/
 
 const googleTranslateConfig = {
-    lang: "ru",
-    domain: "kennel.artprides.ru"
+    lang: "ru"
 
 };
 
