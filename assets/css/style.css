@@ -60,6 +60,14 @@ p {
   color: #ddce94;
   font-family:  Georigia, serif;
   font-size: 16pt; 
+  list-style:none;
+}
+
+.main-text ul li:before {
+    content:  url("../images/point.png");
+    position: relative;
+    left: -5px;
+    top: 8px;
 }
 a {
   color: #ddce94;
