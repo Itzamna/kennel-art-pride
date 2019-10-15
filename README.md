@@ -23,3 +23,4 @@ Kennel and cattery art-pride
  - **thanks-form.html** - страница после отправки формы
  - **update.sh** - исполняемый файл 	 (сюда заходить необязательно)
  - **yarn.lock**
+
