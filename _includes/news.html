@@ -1,18 +1,20 @@
 {% for i in page.news %}
-  <div class="news-block">
-    <p class="news-date">{{i.date}}</p>
-    <h3>{{i.name}}</h3>
-    {% for tx in i.text %}
-      <p>{{tx.p}}</p>
-    {% endfor %}
-    
-    <div class="news-img">
-      {% for photo in i.photos %}
-      <a href="{{ site.url }}/assets/photos/{{photo.img}}" class="thickbox">
-        <img src="{{ site.url }}/assets/photos/{{photo.img}}" class="news-img-2">
-      </a>  
+  <div class="row news-block">
+    <div class="col-md-12">
+      <p class="news-date">{{i.date}}</p>
+      <h3>{{i.name}}</h3>
+      {% for tx in i.text %}
+        <p>{{tx.p}}</p>
       {% endfor %}
-    </div>  
+      <div class="pet-photo">
+        {% for photo in i.photos %}
+        <a class="js-fancybox" href="javascript:;"  data-src="{{ site.url }}/assets/photos/{{photo.img}}" data-animate-in="zoomIn" data-animate-out="zoomOut" data-speed="1000" data-overlay-bg="rgba(0, 0, 0, 1)">
+          <img class="img-fluid news-img-2" src="{{ site.url }}/assets/photos/{{photo.img}}">
+        </a>   
+        {% endfor %}
+      </div>
+
+    </div>
   </div>
 {% endfor %}
 

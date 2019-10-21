@@ -1,3 +1,6 @@
-<a href="{{ site.url }}/assets/photos/{{ include.photo }}" class="thickbox {% if include.pos %} {{ include.pos }}-pos{% endif %}">
-  <img src="{{ site.url }}/assets/photos/{{ include.photo }}"
-       {% if include.height %} height="{{ include.height }}px" {% else %} height="300px" {% endif %}></a>
+<div class="thumbnail">
+  <a class="js-fancybox  {% if include.pos %} {{ include.pos }}-pos{% endif %}" href="javascript:;" data-src="{{ site.url }}/assets/photos/{{ include.photo }}" data-animate-in="zoomIn" data-animate-out="zoomOut" data-speed="1000" data-overlay-bg="rgba(0, 0, 0, 1)">
+    <img class="img-fluid" src="{{ site.url }}/assets/photos/{{ include.photo }}" {% if include.height %} width="{{ include.height }}px" {% else %} width="350px" {% endif %}>
+  </a>
+</div>
+

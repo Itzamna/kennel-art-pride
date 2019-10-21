@@ -1,131 +1,255 @@
 <!DOCTYPE html>
-<!--[if IE 8]> <html lang="ru" class="ie8"> <![endif]-->
-<!--[if IE 9]> <html lang="ru" class="ie9"> <![endif]-->
-<!--[if !IE]><!--> <html lang="ru"> <!--<![endif]-->
-<html>
+<html lang="ru">
   <head>
+    <!-- Title -->
+
+    <!-- Required Meta Tags Always Come First -->
     {% include head.html %}
+
   </head>
-  <body class="all page_fix ">
-    <div class="wrapper">
-      <div class="head">
-        <div class="top-kennel">Питомник кеесхондов</div>
-        <div class="top-contacts">
-          <div class="top-phone">Тел.: <a href="tel:+79165905050">+7-916-590-50-50</a><br>
-          e-mail: <a href="mailto:artprides@yandex.ru">artprides@yandex.ru</a>
+
+  <body>
+    <main>
+        <header id="js-header" class="u-header u-header--static u-shadow-v19 main-header">
+
+        <!-- Top Bar -->
+        <div class="u-header__section">
+          <div class="container ">
+            <div class="row ">
+              <div class="col-md-4 offset-md-4 text-center">
+                <div class="top-kennel d-none d-lg-block">Питомник кеесхондов</div>
+              </div>
+              <div class="col-md-4 ">
+                <div class="d-none d-lg-block  top-contacts">
+                  <div class="top-phone">
+                    Тел.: <a href="tel:+79165905050">+7-916-590-50-50</a><br>
+                    e-mail: <a href="mailto:artprides@yandex.ru">artprides@yandex.ru</a>
+                  </div>
+                  <div class="top-breeder-note"><span class="top-breeder">Анастасия Атрашкевич</span><br> заводчик</div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="top-breeder-note"><span class="top-breeder">Анастасия Атрашкевич</span><br> заводчик</div>
-        </div>
-        <div class="menu">
-          <ul id="top-menu">
-            <li><a href="{{ site.url }}">Главная</a></li>
-            <li><a href="{{ site.url }}/dogs.html">Наши собаки</a></li>
-            <li><a href="{{ site.url }}/puppies.html">Щенки</a></li>
-            <li><a href="{{ site.url }}/litters.html">Пометы</a></li>
-            <li><a href="{{ site.url }}/news.html">Новости</a></li>
-            <li><a href="{{ site.url }}/articles.html">Статьи</a></li>
-            <li><a href="{{ site.url }}/contacts.html">Контакты</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="content">
-        <div class="main-text">
-          <div class="language-bar">
-            <div id="flags" class="size24">
-              <ul id="sortable" class="ui-sortable" style="float:left">
-                <li id='English'><a href='#' title='English' class='nturl notranslate en flag English'></a></li>
-                <li id='German'><a href='#' title='German' class='nturl notranslate de flag German'></a></li>
-                <li id='Italian'><a href='#' title='Italian' class='nturl notranslate it flag Italian'></a></li>
-                <li id='Russian'><a href='#' title='Russian' class='nturl notranslate ru flag Russian'></a></li>
-              </ul>
-            </div>
-            <div id="google_language_translator" class="default-language-ru"></div>
-            </div>
+        </div>  
+        <!-- End Top Bar -->
 
-          <h1>{{ page.title }}</h1>
-          {{ content }}
-        </div>
-      </div>
-    </div>
-    <div class="footer">
-      <div class="inner-footer">
-        Тел.: <a href="tel:+79165631969">+7-916-563-19-69</a>
-        <br><br>
-        <i class="fab fa-vk"></i>
-        <i class="fab fa-facebook"></i>
-        <i class="fab fa-instagram"></i>
-      <div class="right-footer">
-        &copy; 2019. Все права защищены. artprides.ru
-        Любое копирование только с разрешения правообладателя.
-      </div>
-      </div>
-      
+        <div class="u-header__section u-header__section--light g-transition-0_3">
+          <nav class="js-mega-menu navbar navbar-expand-lg g-px-0 menu-a navigation-m">
+            <div class="container">
+              <div class="row ">
+                <div class="col-xs-10 col-sm-10 offset-xs-2 offset-sm-2 d-md-none top-contacts-mob text-left">
+                    <div class="top-phone">
+                      Тел.: <a href="tel:+79165905050">+7-916-590-50-50</a><br>
+                      e-mail: <a href="mailto:artprides@yandex.ru">artprides@yandex.ru</a>
+                    </div>
+                </div>
+              </div>
+              <!-- Responsive Toggle Button -->
+              <button class="navbar-toggler navbar-toggler-right btn g-line-height-1 g-brd-none g-pa-0 ml-auto" type="button"
+                      aria-label="Toggle navigation"
+                      aria-expanded="false"
+                      aria-controls="navBar"
+                      data-toggle="collapse"
+                      data-target="#navBar">
+                <span class="hamburger hamburger--slider g-pa-0">
+                  <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                  </span>
+                </span>
+              </button>
+              <!-- End Responsive Toggle Button -->
+             <div class="collapse navbar-collapse align-items-center flex-sm-row  h-70" id="navBar">
+                <ul class="navbar-nav">
+                  <li id="nav-link--pages" class="nav-link hs-has-sub-menu-1  g-mr-10--lg g-mr-20--xl {% if page.menu == 'index' %} active  {% endif %}" >
+                    <a href="{{ site.url }}">Главная</a>
+                  </li>
+                  <li id="nav-link--pages" class="nav-link hs-has-sub-menu-1 g-mr-10--lg g-mr-20--xl {% if page.menu == 'dogs' %} active'{% endif %}" >
+                    <a href="{{ site.url }}/dogs.html">Наши собаки</a>
+                  </li>
+                  <li id="nav-link--pages" class="nav-link hs-has-sub-menu-1 g-mr-10--lg g-mr-20--xl  {% if page.menu == 'puppies' %} active'{% endif %}" >
+                    <a href="{{ site.url }}/puppies.html">Щенки</a>
+                  </li>
+                  <li id="nav-link--pages" class="nav-link hs-has-sub-menu-1 g-mr-10--lg g-mr-20--xl  {% if page.menu == 'litters' %} active'{% endif %}" >
+                    <a href="{{ site.url }}/litters.html">Пометы</a>
+                  </li>
+                  <li id="nav-link--pages" class="nav-link hs-has-sub-menu-1 g-mr-10--lg g-mr-20--xl  {% if page.menu == 'news' %} active'{% endif %}" >
+                    <a href="{{ site.url }}/news.html">Новости</a>
+                  </li>
+                  <li id="nav-link--pages" class="nav-link hs-has-sub-menu-1 g-mr-10--lg g-mr-20--xl  {% if page.menu == 'articles' %} active'{% endif %}" >
+                    <a href="{{ site.url }}/articles.html">Статьи</a>
+                  </li>
+                  <li id="nav-link--pages" class="nav-link hs-has-sub-menu-1 g-mr-10--lg g-mr-20--xl  {% if page.menu == 'contacts' %} active'{% endif %}" >
+                    <a href="{{ site.url }}/contacts.html">Контакты</a>
+                  </li>
+                </ul>
+              </div>
+              
 
+            </div>
+          </nav>
+        </div>
+      </header>
+        
+      <section class="g-py-30 main-content">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3 offset-md-8 col-xs-12 col-sm-12">
+              <div class="language-bar pull-right">
+                <div id="flags" class="size24">
+                  <ul id="sortable" class="ui-sortable" style="float:left">
+                    <li id='English'><a href='#' title='English' class='nturl notranslate en flag English'></a></li>
+                    <li id='German'><a href='#' title='German' class='nturl notranslate de flag German'></a></li>
+                    <li id='Italian'><a href='#' title='Italian' class='nturl notranslate it flag Italian'></a></li>
+                    <li id='Russian'><a href='#' title='Russian' class='nturl notranslate ru flag Russian'></a></li>
+                  </ul>
+                </div>
+                <div class="clear"></div>
+                <div id="google_language_translator" class="default-language-ru"></div>
+              </div>
+            </div>
+          </div>
+          <div class="row main-text">
+            <div class="offset-md-1 col-md-10 col-xs-12 col-sm-12">
+              <h1>{{ page.title }}</h1>
+              {{ content }}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="g-bg-secondary">
+        <div class="container">
+          <div class="row align-items-center inner-footer">
+            <div class="col-md-12">
+              Тел.: <a href="tel:+79165905050">+7-916-590-50-50</a><br>
+              <a href="https://vk.com/id561032968"><i class="fab fa-vk"></i></a>
+              <a href="https://www.facebook.com/artprides/"><i class="fab fa-facebook"></i></a>
+              <a href="https://www.instagram.com/_art_pride/"><i class="fab fa-instagram"></i></a>
+              <div class="right-footer">
+                &copy; 2019. Все права защищены. artprides.ru.
+                <span class="d-none d-lg-block">Любое копирование только с разрешения правообладателя.
+                  Дизайн сайта - WILDLOOK.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- End Footer -->
+
+      <!-- Go To -->
+      <a class="js-go-to u-go-to-v2" href="#!"
+         data-type="fixed"
+         data-position='{
+           "bottom": 15,
+           "right": 15
+         }'
+         data-offset-top="400"
+         data-compensation="#js-header"
+         data-show-effect="zoomIn">
+        <i class="hs-icon hs-icon-arrow-top"></i>
+      </a>
+      <!-- End Go To -->
+    </main>
+
+    <div class="u-outer-spaces-helper"></div>
+
+
+	<!-- JS Global Compulsory -->
+  <script src="{{ site.url }}/assets/js/menu/jquery/jquery.min.js"></script>
+  <script src="{{ site.url }}/assets/js/menu/jquery-migrate/jquery-migrate.min.js"></script>
+  <script src="{{ site.url }}/assets/js/menu/popper.min.js"></script>
+  <script src="{{ site.url }}/assets/js/menu/bootstrap/bootstrap.min.js"></script>
+    
 <script>function GoogleLanguageTranslatorInit() { new google.translate.TranslateElement({pageLanguage: 'ru', includedLanguages:'en,it,de,ru', autoDisplay: false}, 'google_language_translator');}</script>
 <script type='text/javascript' src='{{ site.url }}/assets/js/google-translate/gtranslate.js'></script>
 <script type='text/javascript' src='//translate.google.com/translate_a/element.js?cb=GoogleLanguageTranslatorInit'></script>
   
-	<!-- JS Global Compulsory -->
-	<script type="text/javascript" src="{{ site.url }}/assets/plugins/jquery/jquery.min.js"></script>
-	<script type="text/javascript" src="{{ site.url }}/assets/plugins/jquery/jquery-migrate.min.js"></script>
-	<script type="text/javascript" src="{{ site.url }}/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 	<!-- JS Implementing Plugins -->
-  <script src="{{ site.url }}/assets/plugins/thickbox/js/thickbox.js" type="text/javascript"></script>                                                        
-  <link rel="stylesheet" href="{{ site.url }}/assets/plugins/thickbox/css/thickbox.css" type="text/css">
 	<script type="text/javascript" src="{{ site.url }}/assets/plugins/back-to-top.js"></script>
-	<script type="text/javascript" src="{{ site.url }}/assets/plugins/jquery-appear.js"></script>
-	<script type="text/javascript" src="{{ site.url }}/assets/plugins/jquery.parallax.js"></script>
 	<script type="text/javascript" src="{{ site.url }}/assets/plugins/counter/waypoints.min.js"></script>
 	<script type="text/javascript" src="{{ site.url }}/assets/plugins/counter/jquery.counterup.min.js"></script>
-	<script type="text/javascript" src="{{ site.url }}/assets/plugins/fancybox/source/jquery.fancybox.pack.js"></script>
-	<script type="text/javascript" src="{{ site.url }}/assets/plugins/owl-carousel/owl-carousel/owl.carousel.js"></script>
-	<script type="text/javascript" src="{{ site.url }}/assets/plugins/scrollbar/js/jquery.mCustomScrollbar.concat.min.js"></script>
 	<!-- JS Customization -->
 	<script type="text/javascript" src="{{ site.url }}/assets/js/custom.js"></script>
 	<!-- JS Page Level -->
 	<script type="text/javascript" src="{{ site.url }}/assets/js/app.js"></script>
-	<script type="text/javascript" src="{{ site.url }}/assets/js/plugins/progress-bar.js"></script>
 	<script type="text/javascript" src="{{ site.url }}/assets/js/plugins/owl-carousel.js"></script>
-	<script type="text/javascript" src="{{ site.url }}/assets/plugins/fancybox/source/jquery.fancybox.pack.js"></script>
-	<script type="text/javascript" src="{{ site.url }}/assets/js/plugins/fancy-box.js"></script>
+    
+  <script src="{{ site.url }}/assets/js/menu/fancybox/jquery.fancybox.min.js"></script>
+    <script src="./assets/js/hs.core.js"></script>
 
- 	<script type="text/javascript">
-		jQuery(document).ready(function() {
-			App.init();
-			FancyBox.initFancybox();
-			StyleSwitcher.initStyleSwitcher();
-		});
-	</script>   
-  
+    <script src="{{ site.url }}/assets/js/hs.core.js"></script>
+    <script src="{{ site.url }}/assets/js/components/hs.header.js"></script>
+    <script src="{{ site.url }}/assets/js/helpers/hs.hamburgers.js"></script>
+    <script src="{{ site.url }}/assets/js/components/hs.dropdown.js"></script>
+    <script src="{{ site.url }}/assets/js/components/hs.counter.js"></script>
+    <script src="{{ site.url }}/assets/js/components/hs.onscroll-animation.js"></script>
+    <script src="{{ site.url }}/assets/js/components/hs.sticky-block.js"></script>
+    <script src="{{ site.url }}/assets/js/components/hs.carousel.js"></script>
+    <script src="{{ site.url }}/assets/js/components/hs.popup.js"></script>
+    <script src="{{ site.url }}/assets/js/components/hs.go-to.js"></script>    
+        
+	<script type="text/javascript" src="{{ site.url }}/assets/js/hs-megamenu/src/hs.megamenu.js"></script>
+	<script type="text/javascript" src="{{ site.url }}/assets/js/helpers/hs.hamburgers.js"></script>
+       
+    <!-- JS Unify -->
+  <script type="text/javascript" src="{{ site.url }}/assets/js/menu/components/hs.header.js"></script>
+  <script type="text/javascript" src="{{ site.url }}/assets/js/menu/helpers/hs.hamburgers.js"></script>
+  <script src="{{ site.url }}/assets/js/menu/components/hs.dropdown.js"></script>
 	<script type="text/javascript" src="{{ site.url }}/assets/js/plugins/style-switcher.js"></script>
 	<script type="text/javascript">
 		jQuery(document).ready(function() {
 			App.init();
 			App.initCounter();
-			App.initParallaxBg();
-			App.initScrollBar();
-			FancyBox.initFancybox();
-			App.initSidebarMenuDropdown();
-			OwlCarousel.initOwlCarousel();
 			StyleSwitcher.initStyleSwitcher();
-			ProgressBar.initProgressBarHorizontal();
+        
 		});
 	</script>
- 
+    <script>
+      $(document).on('ready', function () {
+        // initialization of header
+        $.HSCore.components.HSHeader.init($('#js-header'));
+        $.HSCore.helpers.HSHamburgers.init('.hamburger');
+
+        // initialization of MegaMenu
+        $('.js-mega-menu').HSMegaMenu();
+
+        // initialization of HSDropdown component
+        $.HSCore.components.HSDropdown.init($('[data-dropdown-target]'), {
+          afterOpen: function () {
+            $(this).find('input[type="search"]').focus();
+          }
+        });
+
+        // initialization of scroll animation
+        $.HSCore.components.HSOnScrollAnimation.init('[data-animation]');
+
+        // initialization of go to
+        $.HSCore.components.HSGoTo.init('.js-go-to');
+
+        // initialization of counters
+        var counters = $.HSCore.components.HSCounter.init('[class*="js-counter"]');
+
+        // initialization of carousel
+        $.HSCore.components.HSCarousel.init('[class*="js-carousel"]');
+
+        // initialization of popups
+        $.HSCore.components.HSPopup.init('.js-fancybox');
+
+      });
+
+      $(window).on('load', function () {
+        // initialization of sticky blocks
+        setTimeout(function() { // important in this case
+          $.HSCore.components.HSStickyBlock.init('.js-sticky-block');
+        }, 1);
+      });
+    </script> 
     <script src="{{ site.url }}/assets/js/mousetrap.min.js?a4098"></script>
     <script>
     Mousetrap.bind('ctrl+shift+k', function(e) {
       window.open('https://github.com/Itzamna/kennel-art-pride/edit/gh-pages/{{page.path}}');
     });
     </script>  
-        <script type="text/javascript" src="{{ site.url }}/assets/plugins/tablesorter-master/dist/js/jquery.tablesorter.min.js"></script>
-        <script type="text/javascript" src="{{ site.url }}/assets/plugins/tablesorter-master/dist/js/jquery.tablesorter.widgets.min.js"></script> 
-      <script>
-    $(function(){
-      $('#Mysorter').tablesorter();
-    });
-
-    </script>
     <!--[if lt IE 9]>
     <script src="{{ site.url }}/assets/plugins/respond.js"></script>
     <script src="{{ site.url }}/assets/plugins/html5shiv.js"></script>
@@ -135,6 +259,3 @@
   
   </body>
 </html>
-
-
-
