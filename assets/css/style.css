@@ -293,6 +293,9 @@ a.big-button:hover{
 .navigation-m {
     margin-top: 5px;
 }
+.h-70{
+	height:30px;
+}
 .main-header {
   background: 
     url(../images/header-m-1.png)  center 0 no-repeat,
