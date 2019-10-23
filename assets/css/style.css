@@ -211,6 +211,7 @@ h3.hline-1{
   background-repeat: no-repeat;
   border: none !important;
   text-decoration:none;
+  padding-top: 8px;
 }
 a.button{
   text-decoration:none !important;
@@ -259,6 +260,7 @@ input.button:hover{
   background-repeat: no-repeat;
   border: none !important;
   text-decoration:none;
+  padding-top:8px;
 
 }
 a.big-button{
