@@ -211,21 +211,51 @@ h3.hline-1{
   background-repeat: no-repeat;
   border: none !important;
   text-decoration:none;
-  padding-top: 8px;
 }
 a.button{
   text-decoration:none !important;
   font: 20px 'Good Vibes Pro', Arial, Tahoma, Verdana, sans-serif;
   color: #ddce94;
-  //line-height: 1.9;
+  line-height: 1.6;
 }
 a.button:hover{
   text-decoration:none !important;
   font: 20px 'Good Vibes Pro', Arial, Tahoma, Verdana, sans-serif;
   color: #ddce94;
-  //line-height: 1.9;
+  line-height: 1.6;
   text-shadow: 0px 0px 2px #fffcf2;
 
+}
+.big-button {
+  display: inline-block;
+  height:38px;
+  width:275px;
+  padding-right: 30px;
+  text-align:center;
+  background: url('../images/big-button.png');
+  background-position: top center;
+  background-repeat: no-repeat;
+  border: none !important;
+  text-decoration:none;
+
+}
+a.big-button{
+  text-decoration:none !important;
+  font: 26px 'Good Vibes Pro', Arial, Tahoma, Verdana, sans-serif;
+  color: #cdbe8a;
+  line-height: 1.6;
+}
+a.big-button:hover{
+  display: inline-block;
+  height:38px;
+  width:275px;
+  text-align:center;
+  background: url('../images/big-button-hover.png');
+  text-decoration:none !important;
+  font: 26px 'Good Vibes Pro', Arial, Tahoma, Verdana, sans-serif;
+  color: #ddce94;
+  line-height: 1.6;
+  
 }
 
 input.button{
@@ -249,38 +279,7 @@ input.button:hover{
   padding: 0px 0px !important;
   margin: 0px 0px !important;
 }
-.big-button {
-  display: inline-block;
-  height:38px;
-  width:275px;
-  padding-right: 30px;
-  text-align:center;
-  background: url('../images/big-button.png');
-  background-position: top center;
-  background-repeat: no-repeat;
-  border: none !important;
-  text-decoration:none;
-  padding-top:8px;
 
-}
-a.big-button{
-  text-decoration:none !important;
-  font: 26px 'Good Vibes Pro', Arial, Tahoma, Verdana, sans-serif;
-  color: #cdbe8a;
-  //line-height: 1.8;
-}
-a.big-button:hover{
-  display: inline-block;
-  height:38px;
-  width:275px;
-  text-align:center;
-  background: url('../images/big-button-hover.png');
-  text-decoration:none !important;
-  font: 26px 'Good Vibes Pro', Arial, Tahoma, Verdana, sans-serif;
-  color: #ddce94;
-  //line-height: 1.8;
-  
-}
 .small-info {
   font-size: 12pt;
   text-align: center;
