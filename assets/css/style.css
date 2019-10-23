@@ -245,6 +245,7 @@ a.big-button{
   color: #cdbe8a;
   line-height: 1.6;
 }
+
 a.big-button:hover{
   display: inline-block;
   height:38px;
@@ -257,12 +258,10 @@ a.big-button:hover{
   line-height: 1.6;
   
 }
-
 input.button{
   text-decoration:none !important;
   font: 1em 'Good Vibes Pro', Arial, Tahoma, Verdana, sans-serif;
   color: #ddce94;
-  line-height: 1.6;
   text-align:center;
   padding: 0px 0px !important;
   margin: 0px 0px !important;
@@ -274,7 +273,6 @@ input.button:hover{
   color: #ddce94;
   text-align:center;
 
-  line-height: 1.6;
   text-shadow: 0px 0px 2px #fffcf2;
   padding: 0px 0px !important;
   margin: 0px 0px !important;
