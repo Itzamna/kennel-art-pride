@@ -50,12 +50,16 @@ p {
 
 }
 
-
+.main-text a{
+    text-decoration: none;
+    border-bottom: 1px solid #ddce94;
+}
 a {
   color: #ddce94;
   font-family:  Georigia, serif;
   font-size: 1em; 
   font-style: italic;
+  
 }
 a:hover {
   color: #ddce94;
@@ -185,7 +189,10 @@ h3.hline-1{
   line-height: 1.4;
   text-indent: 0em !important;
 }
-
+.card-photo a, .pet-photo a, .littermates a  {
+  text-decoration: none;
+  border-bottom: none;
+}
 .pet-card, .pet-card a {
   font-size: 14pt;
   color: #a3946f;
@@ -450,6 +457,8 @@ footer.g-bg-secondary {
 .littermates {
   width: 100%;
   margin: 0 auto;
+  min-height:297px;
+
   background: url(../images/litter-bg.png) center center no-repeat;
 }
 
@@ -469,7 +478,6 @@ table.t-contacts {
   width: 853px;
   height: auto;
   min-height: 365px;
-
 }
 .h-contacts {
   color: #ddce94;
@@ -764,11 +772,30 @@ table.table-pedigree td.blck-pedigree-table{
   
 }
 @media (min-width: 769px) and (max-width: 1024px) {
-
+  .hs-has-sub-menu-1 {
+    background: url(../images/hum-button.jpg)  center 0 repeat-x;
+    height: 48px;
+    width:100%;
+    padding-top: 10px;
+  }
 .top-contacts{
   margin-right:0px;
 
 }
+  .main-text img {
+    max-width: 100%;
+    height: auto;
+    margin: 0px;
+    width:100% !important;
+  }
+.contacts {
+  width: 100%;
+  overflow-y: scroll;
+
+  }
+  .littermates, .article-block, .contacts{
+    background-image: none;
+  }
 }
 @media (min-width: 577px) and (max-width: 768px) {
   .hs-has-sub-menu-1 {
@@ -778,6 +805,9 @@ table.table-pedigree td.blck-pedigree-table{
     width:100%;
     padding-top: 10px;
 
+  }
+ .littermates, .article-block, .contacts{
+    background-image: none;
   }
   .main-header{
     background-image: url(../images/top-pad.png) !important;
@@ -797,6 +827,18 @@ table.table-pedigree td.blck-pedigree-table{
   .container{
     max-width:100%;
   }
+.contacts {
+  width: 100%;
+  overflow-y: scroll;
+
+  }
+  .main-text img {
+    max-width: 100%;
+    height: auto;
+    margin: 0px;
+    width:100% !important;
+
+  }
 }
 @media (max-width: 576px) {
   body{
@@ -807,6 +849,10 @@ table.table-pedigree td.blck-pedigree-table{
     height: 48px;
     width:100%;
     padding-top: 10px;
+  }
+.contacts {
+  width: 100%;
+  overflow-y: scroll;
   }
   .navigation-m {
       margin-top: 200px;
@@ -827,6 +873,8 @@ table.table-pedigree td.blck-pedigree-table{
     max-width: 100%;
     height: auto;
     margin: 0px;
+    width:100% !important;
+
   }
 .article-img {
     width: 100%;
