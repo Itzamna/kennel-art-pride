@@ -189,7 +189,7 @@ h3.hline-1{
   line-height: 1.4;
   text-indent: 0em !important;
 }
-.card-photo a, .pet-photo a, .littermates a  {
+.card-photo a, .pet-photo a, .littermates a , .thumbnail a  {
   text-decoration: none;
   border-bottom: none;
 }
